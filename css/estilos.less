@@ -1,0 +1,932 @@
+//variables de colores
+
+@azul:#585483;
+@negro: #20201E;
+@blanco: #ffffff;
+@gris-claro: #eaeaea;
+
+
+//variables de fuentes
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+@fuente-principal: 'Montserrat', sans-serif;
+@fuente-secundaria:'Open Sans', sans-serif;
+@fuente-tercera: 'IBM Plex Mono', monospace;
+
+/* Generales */
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+body{
+        font-size: 16px;
+        font-family: @fuente-principal;
+        transition: all .5s ease;
+        p{
+                font-family: @fuente-secundaria;
+        }
+    }
+
+a{
+        text-decoration: none;
+        font-family: @fuente-principal;
+        color: @negro;
+        transition: all .3s ease;
+    
+        &:hover{
+            color: fade(@negro, 50%);
+        }
+    }
+    h2{
+        font-family: @fuente-principal;
+        color: @azul;
+        font-size: 1.625rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+}
+
+.flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+li{
+        list-style: none;
+}
+// header
+.modal-menu{
+        display: none;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(32, 32, 30, 0.95);
+        z-index: 99;
+        &.active{
+                display: block;
+        }
+        .menu-mobile{
+                position: relative;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                
+                a{
+                        color: @blanco;
+                        font-size: 1.25rem;
+
+                        &:hover{
+                                text-decoration: underline;
+                        }
+                }
+        }
+}
+
+header{
+        background-color: @blanco;
+        width: 100%;
+        position: fixed;
+        // z-index: 99;
+        top: 0;
+        padding: 0 6.25rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 4rem;
+        border-bottom: 1px solid @gris-claro;
+        box-shadow: 0px 0px 12px @gris-claro;
+        transition: all .5s ease;
+                // .logo{
+                //         img{
+                //                 width: 4rem;
+                //         }
+                // }
+                .menu{
+                        a{
+                                padding: 0 0.625rem;
+                                transition: all .5s ease;
+                        }
+
+                }
+                .burger-menu{
+                        display: none;
+                        cursor: pointer;
+                }
+                .dmButton{
+                        margin-left: 30px;
+                        button{
+                                background-color: transparent;
+                                border: 1px solid @negro;
+                                border-radius: 12px;
+                                padding: 10px 6px;
+                                cursor: pointer;
+                                font-size: 0.9rem;
+                                display: flex;
+                                align-items: center;
+
+                                &:hover{
+                                        background-color: @negro;
+                                        color: white;
+                                        transition: all 0.3s ease;
+                                }
+                                i{
+                                        padding-right: 3px;
+                                }
+
+                                #iconolm{
+                                        display: none;
+                                }
+                                #texto-boton-lm{
+                                        display:none;
+                                }
+                        }
+                }
+}
+
+.main{
+        width: 80%;
+        max-width: 1080px;
+        margin: 5rem auto;
+
+        //portada
+        .portada{
+                display: flex;
+                //flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                height: 31.5rem;
+                margin: auto;
+                .column-left{
+                        width: 50%;
+                
+
+                        h1{
+                                font-size: 1.8rem;
+                        
+
+                                span{
+                                        color: @azul;
+                                        font-size:3rem;
+                                        text-transform: uppercase;
+                                        font-family: @fuente-tercera;
+                                }
+                        }
+                        h2{
+                                margin: 0.625rem 0;
+                                font-weight: 400;
+                                font-size: 1.5rem;
+                                span{
+                                        font-weight: 500;
+                                        color: @negro;
+                                }
+                        }
+                        .iconos-portada{
+                                margin-top: 2rem;
+                                display:flex;
+                                align-items: center;
+                                justify-content: flex-start;
+
+                                .icono-portada{
+                                        display:flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin-right: 0.625rem;
+                                        padding: 0.625rem;
+                                        border: 1px solid @gris-claro;
+                                        border-radius: 12px;
+
+                                        &:last-child {
+                                                margin-right: 0px;
+                                            }
+                                        
+                                        i{
+                                                font-size:1.875rem;
+                                        }
+                                
+                                        .titulo-icono{
+                                            display: none;
+                                            font-family: @fuente-principal;
+                                            font-size: 1rem;
+                                            font-weight: 500;
+                                        }
+                                }
+
+                        }
+
+                        button{
+                                margin-top: 2rem;
+                                background-color: transparent;
+                                border: 1px solid @negro;
+                                border-radius: 12px;
+                                padding: 10px 6px;
+                                cursor: pointer;
+                                font-size: 0.9rem;
+
+                                &:hover{
+                                        transform: scale(0.95);
+                                        transition: 0.3s all ease;
+                                }
+                                i{
+                                        margin-right: 0.625rem;
+                                }
+
+                        }
+                        
+                }
+
+                .column-right{
+                        width:50%;
+
+                        // img{
+                        //         width: 400px;
+                        //         height: 400px;
+                        //         object-fit: cover;
+                        //         max-width: 31.25rem;
+                        //         border-radius: 12px;
+                        // }
+                        img{
+                                width: 100%;
+                                height: 400px;
+                                object-fit: cover;
+                                border-radius: 12px;
+                        }
+                }
+
+        }
+
+        //Sobre mí
+        .sobre-mi{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 31.5rem;
+                margin: 4rem auto;
+
+
+                div{
+                        width: 50%;
+                        
+                }
+                .left-column{
+                        // height: 100%;
+                        margin-right: 3.25rem;
+                        
+
+                        // img{
+                        //         width: 100%;
+                        //         height: 400px;
+                        //         object-fit: cover;
+                        //         border-radius: 12px;
+                        // }
+                        img{
+                                width: 75%;
+                                height: 400px;
+                                object-fit: cover;
+                                // max-width: 31.25rem;
+                                border-radius: 12px;
+                        }
+                }
+                // h2{
+                //         font-family: @fuente-principal;
+                //         font-size: 1.5rem;
+                //         font-weight: 500;
+                //         margin-bottom: 2rem;
+                // }
+                p{
+                        font-family: @fuente-principal;
+                        font-size: 0.9375rem;
+                        margin-bottom: 1rem;
+
+                        &:last-child{
+                                margin-bottom: 0;
+                        }
+                }
+        }
+
+        //Skills
+        .skills{
+                margin: 4rem auto;
+                
+                h2{
+                        text-align: center;
+
+                }
+                
+                .iconos-skills{
+                        margin: auto;
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        
+                        .elemento-skills{
+                                display:flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 1rem;
+                                height: 3.75rem;
+                                width: 25%/*18.75rem*/;
+                                padding: 0.625rem;
+                                border: 1px solid @gris-claro;
+                                border-radius: 12px;
+                                box-shadow: 0px 5px 10px @gris-claro;
+                                
+                                i{
+                                        font-size:1.875rem;
+                                        margin-right: 0.75rem;
+                                }
+                                img{
+                                        max-width: 40px;
+                                        margin-right: 0.75rem;
+                                }
+                                h3{
+                                    font-family: @fuente-principal;
+                                    font-size: 1.25rem;
+                                    font-weight: 500;
+                                }
+                        }
+                }
+        }
+
+        //Portfolio
+        .portfolio{
+                margin: 4rem auto;
+                width: 100%;
+                overflow: hidden;
+
+                h2{
+                        text-align: center;
+                        padding: 1rem;
+                }
+                .options{
+                        display: flex;
+                        justify-content: center;
+                        padding: 1rem;
+                        width: 70%;
+                        margin: auto;
+                        margin-bottom: 1rem;
+
+                        .option{
+                                cursor: pointer;
+                                margin: auto 20px;
+
+                                &:hover{
+                                        color: @azul;
+                                }
+                        }
+
+                        .active{
+                                border-bottom: 1px solid @azul;
+                                color: @azul;
+                        }
+                }
+
+                .contents{
+
+                        display: flex;
+                        width: 300%;
+                        margin-left: 0;
+                        transition: all .5s ease; 
+                        
+                        .content{
+                                display: flex;
+                                width: 100%;
+
+                                .item-portfolio{
+                                        width: 50%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        margin: auto 1rem;
+
+                                        img{                                                
+                                                width: 100%;   
+                                                object-fit: contain;
+                                                margin-bottom: 1rem;
+                                        }
+
+                                        h4{
+                                                font-size: 1rem;
+                                        }
+
+                                        button{
+                                                margin-top: 10px;
+                                                background-color: transparent;
+                                                border: 1px solid @negro;
+                                                border-radius: 12px;
+                                                padding: 10px 10px;
+                                                cursor: pointer;
+                                                font-size: 0.9rem;
+                                                &:hover{
+                                                        transform: scale(0.95);
+                                                        transition: 0.3s all ease;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+
+        //Estudios
+        .estudios{
+                margin: 4rem auto;
+                max-height: 360px;
+                overflow: hidden;
+                transition: all 1s ease;
+                box-shadow: inset 0px -20px 10px -15px @gris-claro;
+
+                &.new-height{
+                        max-height: 2000px;
+                        box-shadow: none;
+                        transition: all 1s ease;
+                }
+                h2{
+                        text-align: center;
+                        
+                }
+                img{
+                        max-width: 60px;
+                        max-height: 60px;
+                        margin-right: 0.75rem;
+                }
+
+                .items-estudios{
+                        display:flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: wrap;
+
+
+                        p{
+                                position: absolute;
+                                bottom: 0px;
+                        }
+                        .item-estudios{
+                                display:flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0.625rem;
+                                width: 30%;
+                                height: 7.5rem;
+                                padding: 1rem 1.625rem;
+                                border: 1px solid @gris-claro;
+                                border-radius: 12px;
+                                box-shadow: 0px 5px 10px @gris-claro;
+        
+                                h4{
+                                        font-size: 0.875rem;
+                                        margin-bottom: 0.625rem;
+                                }
+                                h5{
+                                        font-size: 0.75rem;
+                                        font-style: italic;
+                                }
+        
+                                .left{
+                                        width: 30%;
+                                }
+                                .right{
+                                        width: 70%;
+                                }
+                        }
+                       
+                }
+
+                
+        }
+
+        .btn-ver-mas{
+                display: flex;
+                justify-content: center;
+                margin-top: -2rem;
+
+                button{
+                        background-color: transparent;
+                        border: 1px solid @negro;
+                        border-radius: 12px;
+                        padding: 10px 10px;
+                        cursor: pointer;
+                        font-size: 0.9rem;
+                        display: flex;
+                        align-items: center;
+                
+                        &:hover{
+                                background-color: @negro;
+                                color: white;
+                                transition: all 0.3s ease;
+                        }
+                        i{
+                                padding-right: 3px;
+                        }
+                
+                }
+        }
+        
+        //Contacto         
+        .section-contacto{
+                width: 70%;
+                margin: 4rem auto;
+                
+                h2{
+                        text-align: center;
+                        margin-bottom: 2rem;
+                }
+
+                .contacto{
+                        
+                        margin: 2rem auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .left{
+                                width: 70%;
+                        }
+                        .right{
+                                width: 30%;
+                                margin-right: 3rem;
+                                img{
+                                        width: 100%;
+                                }
+                        }
+                        .item-contacto{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                margin: 2rem auto;
+        
+                                i{
+                                        font-size: 2rem;
+                                        margin-right: 0.825rem;
+                                }
+                                h3{
+                                        font-size: 1rem;
+                                }
+                        }
+                }
+        }
+
+}
+
+//Media Queries
+@media all and (max-width: 900px){
+        .darkmode{
+                header{
+                        .dmButton{
+                                button{
+                                        #texto-boton-lm{
+                                                display:none;
+                                        }
+                                }
+                        }
+                }
+        }
+}
+
+@media all and (max-width: 1120px){
+
+        .main{
+                .estudios{
+                        .items-estudios{
+
+                                .item-estudios{
+                                        margin: 0.625rem 2rem;
+                                        width: 40%;
+                                }
+                        }
+                        }
+        }
+}
+
+@media all and (max-width: 900px){
+        header{
+                width: 100%;
+                padding: 0 4rem;
+                justify-content: space-between;
+
+                .menu{
+                        display: none;
+                }
+                .burger-menu{
+                        display: block;
+                }
+
+
+                .dmButton{
+                        margin-left:0;
+
+
+                        button{
+                                i{
+                                        padding-left: 3px;
+                                        padding-right: 3px;
+                                }
+                                p{
+                                        display: none;
+                                }
+                        }
+                }
+        }
+        .main{
+                padding: 0 1rem;
+                width: 100%;
+                .portada{
+                        display: flex;
+                        flex-direction: column;
+                        height: auto;
+                        align-items: center;
+                        .column-left{
+                                width: 100%;
+                                margin: 2rem auto;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+
+                                // h1{
+                                //         text-align: center;
+                                // }
+                                // h2{
+                                //         text-align: center;
+                                // }
+                                // .iconos-portada{
+                                //         justify-content: center;
+                                // }
+                                // a{
+                                //         text-align: center;
+                                // }
+                        }
+                        .column-right{
+                                width: 100%;
+                        }
+                }
+                .sobre-mi{
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        height: auto;
+                        width: 100%;
+                        padding: 0 1rem;
+                        .left-column{
+                                margin: 0;
+                                img{
+                                        width: 100%;
+                                }
+                        }
+                        div{
+                                width: 100%;
+                                margin: 2rem 0;
+                        }
+                        
+                       
+                }
+                .skills{
+                        .iconos-skills{
+                                .elemento-skills{
+                                        width: auto;
+
+                                        h3{
+                                                font-size: 1rem;
+                                        }
+                                }
+                        }
+                }
+                .portfolio{
+                        .options{
+                                width: 100%;
+
+                                h3{
+                                        font-size: 1.05rem;
+                                }
+                        }
+
+                        .contents{
+                                
+                                .content{
+                                        flex-direction: column;
+                                        
+                                        .item-portfolio{
+                                                width: 100%;
+                                                margin: 1rem auto;
+                                        }
+                                }
+                        }
+                }
+                .estudios{
+                        .items-estudios{
+
+                                .item-estudios{
+                                        width: 40%;
+                                        height: auto;
+                                        margin: 1rem;
+                                        flex-direction: column;
+                                        align-items: flex-start;
+
+                                        .left{
+                                                width: 100%;
+                                                display: flex;
+                                                justify-content: center;
+                                                height: 50px;
+                                                img{
+                                                        height: 50px;
+                                                        margin: 0;
+                                                }
+                                        }
+                                        .right{
+                                                width: 100%;
+                                                height: 70px;
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: center;
+                                                justify-content: center;
+                                                margin-top: 1rem;
+                                                h4{
+                                                        text-align: center;
+                                                        font-size: 12px;
+                                                }
+                                                h5{
+                                                        text-align: center;
+                                                        font-size: 10px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+                .section-contacto{
+                        width: 100%;
+                        h2{
+                                margin-bottom: 1rem;
+                                font-size: 1.625rem;
+                        }
+                        .contacto{
+                                display: flex;
+                                flex-direction: column;
+                                margin: 0;
+                                align-items: center;
+
+                                .left{
+                                        width: 100%;
+
+                                        a{
+                                                .item-contacto{
+                                                        margin: 1rem;
+
+                                                        i{
+                                                                font-size: 1.625rem;
+                                                        }
+                                                        div{
+                                                                h3{
+                                                                        font-size: 1rem;
+                                                                }
+                                                                p{
+                                                                        font-size: 0.8rem;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                                .right{
+                                        width: 100%;
+                                        margin: 1rem 0;
+
+                                        img{
+                                                height: 250px;
+                                                object-fit: cover;
+                                        }
+                                }
+                        }
+                }
+        }
+}
+.darkmode{
+        background-color: @negro;
+
+        h1,h2,h3,h4,h5,p{
+                color: white;
+        }
+        button{
+                color: white;
+                }
+        header{
+                background-color: @negro;
+                border-bottom: 1px solid #3f3f3f;
+                box-shadow: 0px 0px 12px #3f3f3f;
+
+                .menu{
+                        a{
+                                color: white;
+                        }
+                }
+
+                i{
+                        color: white;
+                }
+                .dmButton{
+                        button{
+                                border-color: white;
+
+                                &:hover{
+                                        background-color: white;
+                                        i{
+                                                color: @negro;
+                                        }
+                                        p{
+
+                                                color: @negro;
+                                        }
+                                }
+                                #iconolm{
+                                        display: block;
+                                }
+                                #texto-boton-lm{
+                                        display:block;
+                                }
+                                #iconodm{
+                                        display: none;
+                                }
+                                #texto-boton-dm{
+                                        display:none;
+                                }
+                        }
+                }
+        }
+        .main{
+                .portada{
+                        .column-left{
+                                a{
+                                        button{
+                                                border-color: white;
+                                        }
+                                }
+                                span{
+                                        color: white;
+                                }
+                        }
+                }
+                .skills{
+                        .iconos-skills{
+                                .elemento-skills{
+                                        box-shadow: 0px 5px 10px #3f3f3f;
+                                }
+                        }
+                }
+                .portfolio{
+                        .contents{
+                                .content{
+                                        .item-portfolio{
+                                                button{
+                                                        border-color: white;  
+                                                }
+                                        }
+                                }
+                        }
+                }
+                .estudios{
+                        box-shadow: inset 0px -20px 10px -15px #3f3f3f;
+                        &.new-height{
+
+                                box-shadow: none;
+
+                        }
+                        .items-estudios{
+                                .item-estudios{
+                                        box-shadow: 0px 5px 10px #3f3f3f;
+                                }
+                        }
+                }
+                .btn-ver-mas{
+                        button{
+                                border-color: white;  
+                        }
+                }
+                .section-contacto{
+                        .contacto{
+                                .left{
+                                        .item-contacto{
+                                                i{
+                                                        color: white;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+
+        @media all and (max-width: 900px){
+                header{
+                        .dmButton{
+                        button{
+                                p{
+                                        display: none !important;
+                                }
+                        }
+                }
+                }
+        }
+        
+}

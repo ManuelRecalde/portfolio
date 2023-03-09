@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Recalde | Desarrollador Front-End</title>
+    <script src="https://kit.fontawesome.com/a4e3da72d4.js" crossorigin="anonymous"></script>
+	<script src="js/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="">
+    
+    
+    <!-- header -->
+    <header>
+        <!-- <div class="logo">
+            <img src="img/Logo Manuel Recalde.png" alt="logo">
+        </div> -->
+        <nav class="menu">
+                <a href="#portada" class="volver-arriba">Inicio</a>
+                <a href="#sobremi" class="scroll-suave">Sobre Mí</a>
+                <a href="#skills" class="scroll-suave">Skills</a>
+                <a href="#portfolio" class="scroll-suave">Portfolio</a>
+                <a href="#estudios" class="scroll-suave">Estudios</a>
+                <a href="#contacto" class="scroll-suave">Contacto</a>
+        </nav>
+        <i class="fa-solid fa-bars burger-menu" id="burger-menu"></i>
+        <div class="dmButton">
+            <button id="dark-mode">
+                <i id="iconodm" class="fa-regular fa-moon"></i>
+                <i id="iconolm" class="fa-regular fa-lightbulb"></i>
+                <p id="texto-boton-dm">Modo Oscuro</p>
+                <p id="texto-boton-lm">Modo Claro</p>
+            </button>
+        </div>
+
+    </header>
+
+    <div class="modal-menu" id="modal-menu">
+        <div class="menu-mobile">
+            <a href="#portada" class="volver-arriba">Inicio</a>
+            <a href="#sobremi" class="scroll-suave">Sobre Mí</a>
+            <a href="#skills" class="scroll-suave">Skills</a>
+            <a href="#portfolio" class="scroll-suave">Portfolio</a>
+            <a href="#estudios" class="scroll-suave">Estudios</a>
+            <a href="#contacto" class="scroll-suave">Contacto</a>
+        </div>
+    </div>
+
+
+
+    <div class="main">
+    <!-- Portada -->
+    <section class="portada" id="portada">
+        <div class="column-left">
+            <h1>¡Hola, soy<br><span>Manuel!</span></h1>
+            <h2><span>{</span> Desarrollador Front-End <span>}</span></h2>
+
+            <div class="iconos-portada">
+                
+                <div class="icono-portada">
+                    <i class="fa-brands fa-html5" style="color:#FF8000"></i>
+                    <h3 class="titulo-icono">HTML</h3>
+                </div>
+                
+                <div class="icono-portada">
+                    <i class="fa-brands fa-css3-alt" style="color:#00aae4"></i>
+                    <h3 class="titulo-icono">CSS</h3>
+                </div>
+                
+                <div class="icono-portada">
+                    <i class="fa-brands fa-square-js" style="color:#f0db4f"></i>
+                    <h3 class="titulo-icono">JavaScript</h3>
+                </div>
+                
+                <div class="icono-portada">
+                    <i class="fa-brands fa-react" style="color:#61dafb"></i>
+                    <h3 class="titulo-icono">React</h3>
+                </div>
+                    
+            </div>
+            <a href="./CV Manuel Recalde.pdf" target="_blank" download><button><i class="fa-regular fa-circle-down"></i>Descargar CV</button></a>
+        </div>
+        <!-- <div class="column-right">
+            <img src="img/Manu.jpg" alt="">
+        </div> -->
+        <div class="column-right">
+            <img src="" alt="" name="sliderSobreMi"/>
+        </div>
+    </section>
+
+    <!-- Sobre Mi -->
+    <section class="sobre-mi" id="sobremi">
+        <!-- <div class="left-column">
+            <img src="" alt="" name="sliderSobreMi"/>
+        </div> -->
+        <div class="left-column">
+            <img src="img/Manu.jpg" alt="">
+        </div>
+        <div>
+            <h2>Sobre Mí</h2>
+            <p>Tengo 28 años, nací en Cañuelas, Provincia de Buenos Aires, y hace 4 años que vivo en Capital.</p>
+            <p>La pandemia del Covid marcó un vuelco en mi vida. Al quedarme sin trabajo, empecé a buscar otras cosas que me apasionen, y me encontré con el Diseño Web.</p>
+            <p>Accedí a un plan Premium de una plataforma de cursos que me permitía tener acceso a todos los cursos. Empecé con WordPress y rápidamente me animé a buscar los primeros clientes.</p>
+            <p>Ahora hace 3 años que soy freelancer, y en el medio seguí capacitándome constantemente. Me di cuenta que me gustaba más la parte de programación que la de diseño, por lo que decidí avanzar en esa dirección.</p> 
+            <p>Hoy me encuentro buscando oportunidades como Desarrollador Front End, para poder aportar mis conocimientos y experiencia, y en lo personal, seguir aprendiendo.</p>
+        </div>
+        
+    </section>
+
+
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="iconos-skills">
+
+                <div class="elemento-skills">
+                    <i class="fa-brands fa-html5" style="color:#FF8000"></i>
+                    <h3>HTML</h3>
+                </div>
+                <div class="elemento-skills">
+                    <i class="fa-brands fa-css3-alt" style="color:#00aae4"></i>
+                    <h3>CSS</h3>
+                </div>
+                <div class="elemento-skills">
+                    <i class="fa-brands fa-less" style="color:#003c6b"></i>
+                    <h3>Less</h3>
+                </div>
+                
+                <div class="elemento-skills">
+                    <i class="fa-brands fa-square-js" style="color:#f0db4f"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="elemento-skills">
+                    <i class="fa-brands fa-react" style="color:#61dafb"></i>
+                    <h3>React</h3>
+                </div>
+                <div class="elemento-skills">
+                    <i class="fa-brands fa-wordpress" style="color:#1f6f93"></i>
+                    <h3>WordPress</h3>
+                </div>
+                <div class="elemento-skills">
+                    <i class="fa-brands fa-elementor" style="color:#8b0038"></i>
+                    <h3>Elementor</h3>
+                </div>
+                <div class="elemento-skills">
+                    <img src="img\woocommerce.png" alt="" srcset="">
+                    <h3>WooCommerce</h3>
+                </div>
+
+        </div>
+        
+    </section>
+
+    <!-- Porfolio -->
+    <section class="portfolio" id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="options">
+            <div class="option active" id="optionReact"><h3>Apps en React</h3></div>
+            <div class="option" id="optionHtml"><h3>Sitios HTML + CSS + JS</h3></div>
+            <div class="option" id="optionWordpress"><h3>Sitios en Wordpress</h3></div>
+        </div>
+        <div class="contents" id="contents">
+            <div class="content">
+                <div class="item-portfolio">
+                    <img src="img/captura gastos.png" alt="App Gastos" srcset="">
+                    <h4>App de control de gastos</h4>
+                    <a href="https://64074019d9e433005732cff1--vocal-choux-bb14ee.netlify.app/" target="_blank" rel="noopener noreferrer"><button>Ver Sitio</button></a>
+                </div>
+                <div class="item-portfolio">
+                    <img src="img/captura pacientes.png" alt="gestion de pacientes" srcset="">
+                    <h4>App de gestión de pacientes</h4>
+                    <a href="https://adorable-kheer-41f758.netlify.app/" target="_blank" rel="noopener noreferrer"><button>Ver Sitio</button></a>
+                </div>
+                
+            </div>
+            <div class="content">
+                <div class="item-portfolio">
+                    <img src="img/captura coffe and cake.png" alt="Coffe and Cake" srcset="">
+                    <h4>Sitio web Coffe & Cake</h4>
+                    <a href="https://6407381f851e590008ea3be6--graceful-pudding-5443cb.netlify.app/" target="_blank" rel="noopener noreferrer"><button>Ver Sitio</button></a>
+                </div>
+                <div class="item-portfolio">
+                    <img src="img/captura portfolio.png" alt="portfolio" srcset="">
+                    <h4>Portfolio Personal</h4>
+                    <a href="https://github.com/ManuelRecalde/portfolio" target="_blank" rel="noopener noreferrer"><button>Ver Repositorio</button></a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="item-portfolio">
+                    <img src="img/captura tu optica.png" alt="Tu Optica" srcset="">
+                    <h4>Sitio web de Tu Optica (en proceso)</h4>
+                    <a href="https://tuoptica.candelamazzocchi.com/" target="_blank" rel="noopener noreferrer"><button>Ver Sitio</button></a>
+                </div>
+                <div class="item-portfolio">
+                    <img src="img/Captura Sitio Cesteros.png" alt="Cesteros" srcset="">
+                    <h4>Sitio web de Inmobiliaria Cesteros</h4>
+                    <a href="https://santiagocesteros.com/" target="_blank" rel="noopener noreferrer"><button>Ver Sitio</button></a>
+                </div>
+                
+            </div>
+        </div>
+        
+    </section>
+    
+    <!-- Estudios -->
+    <section class="estudios" id="estudios">
+        <h2>Estudios</h2>
+        <div class="items-estudios">
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-udemy.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>React: La guía completa</h4>
+                    <h5>En Udemy</h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-crehana.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>Introducción al desarrollo web front end: HTML y CSS.</h4>
+                    <h5>En Crehana</h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-crehana.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>CSS desde cero.</h4>
+                    <h5>En Crehana</h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-crehana.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>Fundamentos de JavaScript.</h4>
+                    <h5>En Crehana</h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-crehana.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>JavaScript: Integración de APIs.</h4>
+                    <h5>En Crehana</h5>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-crehana.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>Construir un sitio web en WordPress.</h4>
+                    <h5>En Crehana</h5>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-crehana.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>WordPress: Diseña y desarrolla páginas web desde cero.</h4>
+                    <h5>En Crehana</h5>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-crehana.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>Crea un sitio web de comercio electrónico en WordPress.</h4>
+                    <h5>En Crehana</h5>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-crehana.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>Diseñador web independiente: haz que tu talento sea independiente.</h4>
+                    <h5>En Crehana</h5>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-crehana.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>Fundamentos de Python.</h4>
+                    <h5>En Crehana</h5>
+                    <p></p>
+                </div>
+            </div>
+
+
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-coder.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>Data Analytics</h4>
+                    <h5>En Coderhouse</h5>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="item-estudios">
+                <div class="left">
+                    <img src="img\icono-capacitarte.png" alt="">
+                </div>
+                <div class="right">
+                    <h4>Python</h4>
+                    <h5>En Capacitarte</h5>
+                    <p></p>
+                </div>
+            </div>
+
+
+        </div>
+
+        
+    </section>
+    <div class="btn-ver-mas">
+        <button class="ver-mas" id="ver-mas">Ver más</button>
+    </div>
+
+    <!-- Contacto -->
+    <section class="section-contacto" id="contacto">
+        <h2>Contacto</h2>
+        <div class="contacto">
+        
+        <div class="left">
+            <a href="mailto:manuelrecalde.clientes@gmail.com">
+                <div class="item-contacto">
+                    <i class="fa-regular fa-envelope"></i>
+                    <div>
+                        <h3>Dirección de Email</h3>
+                        <p>manuelrecalde.clientes@gmail.com</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/manuel-recalde-5173ab169/">
+                <div class="item-contacto">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <div>
+                        <h3>Linked In</h3>
+                        <p>https://www.linkedin.com/in/manuel-recalde-5173ab169/</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://wa.me/+541153131608" target="_blank" rel="noopener noreferrer">
+                <div class="item-contacto">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>+54 11 53131608</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="right">
+            <img src="img\contacto.jpg" alt="">
+        </div>
+
+    </div>
+    </section>
+
+    </div>
+
+    <script src="js/iconos.js"></script>
+    <script src="js/sliderSobreMi.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js\menu-mobile.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/darkMode.js"></script>
+    <script src="js/verMas.js"></script>
+</body>
+</html>
